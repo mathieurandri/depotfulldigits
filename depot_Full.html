@@ -1,0 +1,45 @@
+<style>
+    .item {
+        display: inline-block;
+        width: 50%;
+        font-size: 100 px ;
+        padding: 0.9em 0;
+      
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+        border-bottom: 1px solid #cccccc ; 
+    }
+    .mathieu3 {
+        display:block;
+        content:"\A0";
+    }
+    .mathieu5{
+        background-image: url(starss.jpg) ;
+
+        
+    }
+</style>
+    <html>
+        <head>
+            <title>depot</title>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+            <script src="http://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+            <script src="vue.js"></script>
+        </head>
+        <body>
+            <center class="mathieu2">full repository </center>
+               
+            <div class="items">
+                
+                <div class="item" v-for="(item, index) in items">
+                    <a class="mathieu" :href="'https://www.github.com/'+item.full_name">{{item.name}}</a> 
+                    <i class="fas fa-star"></i> : {{item.stargazers_count}} : {{item.stars}}
+                    <div class="mathieu3">{{item.description}}</div>
+                </div>
+            </div>
+            
+    
+        </body>
+        <script type="text/javascript" src="depotFull.js"></script>
+      
+    </html>   
+   
