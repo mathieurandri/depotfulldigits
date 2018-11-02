@@ -1,22 +1,30 @@
 <style>
-    .item {
-        display: inline-block;
-        width: 50%;
+    .cssFull {
         font-size: 100 px ;
         padding: 0.9em 0;
       
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
         border-bottom: 1px solid #cccccc ; 
     }
-    .mathieu3 {
-        display:block;
-        content:"\A0";
-    }
-    .mathieu5{
-        background-image: url(starss.jpg) ;
+    .half-width {
 
-        
+        display: inline-block;
+        width: 50%;
     }
+    .titleCss {
+        text-transform: uppercase ;
+        color : #33ccb3;
+    font : 200% impact, futura, sans-serif;
+    text-transform : uppercase;
+    float : center;
+    overflow : hidden;
+    position : relative;
+    padding-left : 3px;
+    }
+    .descriptStyle {
+        padding-top: 10px ;
+    }
+    
 </style>
     <html>
         <head>
@@ -26,20 +34,23 @@
             <script src="vue.js"></script>
         </head>
         <body>
-            <center class="mathieu2">full repository </center>
+            <center class="titleCss">full repository </center>
                
             <div class="items">
-                
-                <div class="item" v-for="(item, index) in items">
+                    
+                <div class="item half-width" v-for="(item, index) in items">
+                <div class="cssFull" v-if="item.stargazers_count >= 10">
                     <a class="mathieu" :href="'https://www.github.com/'+item.full_name">{{item.name}}</a> 
-                    <i class="fas fa-star"></i> : {{item.stargazers_count}} : {{item.stars}}
-                    <div class="mathieu3">{{item.description}}</div>
+                    <i class="fas fa-star"></i> : {{item.stargazers_count}} 
+                    <div class="descriptStyle">{{item.description}}</div>
+                </div>
                 </div>
             </div>
             
     
         </body>
         <script type="text/javascript" src="depotFull.js"></script>
+        
       
     </html>   
    

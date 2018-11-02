@@ -1,4 +1,3 @@
-// console.log('premier') ;
 var HttpClient = function() {
     this.get = function(aUrl, aCallback) {
         var anHttpRequest = new XMLHttpRequest();
@@ -12,10 +11,10 @@ var HttpClient = function() {
 }
 var total = [] ;
 var client = new HttpClient() ;
+//insert user
 var user = ['fulldigits','mathieurandri','sylvain261','ranaivoarivaojl','robinhajatiana','tOkido','andryhub','ravorona','cerzzwiz','Tandzone','tokiniainah','TahinaMananjara'] ;
 var userFechted = 0 ;
 _.forEach (user , function(value, index){
-    // console.log('2hfheuehfuvzuehf');
     var theurl ='https://api.github.com/users/'+value+'/starred' ;
     var client = new HttpClient () ;
     
@@ -41,7 +40,7 @@ _.forEach (user , function(value, index){
 } ) ;
 
 function render(total){
-    tab2 = [] ;
+        tab2 = [] ;
     for ( var i=0 ; i<total.length; i++) {
         tab2.push(
             {
@@ -53,7 +52,8 @@ function render(total){
             }
         );
     }   
-    console.log("tab2",tab2) ;
+    
+   
     var tabUnique = {};
     for (var k=0 ; k<tab2.length ; k++) {
         if (tabUnique[tab2[k].name]) {
@@ -68,20 +68,24 @@ function render(total){
         tabUnique[tab2[k].name]['name']=tab2[k].name ;
     }
 
-       console.log("ty le tab unique",tabUnique);
+    
        
     var secondDiv = document.getElementById('second');
     var htmltext = '';
     var tabUniq3 = {} ;
    
         var tabUniq2 = _.orderBy(tabUnique,[ 'stars','stargazers_count'],['desc', 'desc']) ;
-        console.log("ty le izz ",tabUniq2) ;
+       
+        var tabUniq3 =[] ;
+        
+       
         var example1 = new Vue({
             el: '.items',
             data: {
               items: tabUniq2
             }
         });
+        
     
 
 }
