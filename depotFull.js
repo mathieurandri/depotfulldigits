@@ -71,14 +71,7 @@ function render(total){
     
        
     var secondDiv = document.getElementById('second');
-    var htmltext = '';
-    var tabUniq3 = {} ;
-   
         var tabUniq2 = _.orderBy(tabUnique,[ 'stars','stargazers_count'],['desc', 'desc']) ;
-       
-        var tabUniq3 =[] ;
-        
-       
         var example1 = new Vue({
             el: '.items',
             data: {
