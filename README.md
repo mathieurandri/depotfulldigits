@@ -14,11 +14,9 @@ CSS3
 Javascript , Lodash ,vuejs
 
 #  Qu’est-ce que c’est ?
-C'est la représentation des  dépôt starrées par le membre de l'équipe **FullDigits**
-et qui affiche le **Nom** et la **description** du dépôt starré 
+C'est la représentation des  dépôts starrées par les membres de l'équipe **FullDigits** et qui affiche le **Nom**
 
-et le nombre de stars de GitHub qui est trié  par le nombre de stars global du membre de l'équipe  global de le
-
+la **description** et le **le nombre de star** et  dirige  directement vers le dépot sur GitHub
 de l''équipe
 
 
